@@ -66,16 +66,21 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
       </button>
 
       {/* Search */}
-      <div className="flex items-center gap-2 p-3 mt-4 border border-gray-400 dark:border-white/20 rounded-md">
-        <img src={assets.search_icon} className="w-4 dark:invert" alt="Search" />
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search conversations"
-          className="text-xs placeholder:text-gray-400 outline-none bg-transparent w-full"
-        />
-      </div>
+        <div className="flex items-center gap-2 p-3 mt-4 border border-gray-400 dark:border-white/20 rounded-md">
+          <img
+            src={assets.search_icon}
+            className="w-4 invert dark:invert-0"
+            alt="Search"
+          />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search conversations"
+            className="text-xs placeholder:text-gray-400 outline-none bg-transparent w-full"
+          />
+        </div>
+
 
       {/* Recent Chats */}
       {chats.length > 0 && <p className="mt-4 text-sm">Recent Chats</p>}
